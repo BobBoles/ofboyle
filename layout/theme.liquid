@@ -2,7 +2,7 @@
 {%- assign dir_body = settings.dir_body -%}
 <!--[if IE 9]> <html class="ie9 no-js" lang="{{ shop.locale }}" dir="{{dir_body}}"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js{%if settings.popup_ageVerification%} ageVerificationModal{%endif%}" lang="{{ shop.locale }}" dir="{{dir_body}}"> <!--<![endif]-->
-  <head>
+  <head>{% render 'pagefly-head' %}
     <meta name="google-site-verification" content="DeQH_8uF1N6qoWRh3WUFpJ5OhWcgjb4TOfLPUV1UpIY" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
