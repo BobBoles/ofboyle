@@ -1,0 +1,74 @@
+.image-style-1 {
+    box-shadow: 2px 2px 4px rgba(0,0,0,.3), 40px -40px 0 rgba(0,0,0,.075);
+    margin-right: 80px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+  .image-style-1 {
+   	box-shadow: none;
+    margin: 0 auto 4rem !important;
+    float: none !important;
+    display: block;
+  }
+}
+
+.image-section {
+	max-width: 900px;
+    margin: auto auto 5rem;
+}
+
+.content-summary {
+    overflow: visible;
+}
+
+/* product slide bg */
+.aspectRatioPlaceholder, .imagecontainer-img {
+  background-color: transparent !important;
+}
+
+/* home banner height */
+.item__banner.item__2.mt-2.mt-md-0 {
+    overflow: hidden;
+}
+
+.filter-by.filterCanvas,
+.filters-canvas .filter-by,
+.kt_flash_lable {
+    display: none !important;
+}
+.fake_select > ul li._soulout {
+    opacity: 1 !important;
+}
+
+.footer-logo {
+    margin-bottom: 0;
+}
+.imgs__banner_template6 .img__banner {
+    padding-bottom: 65% !important;
+}
+.flashs span + span {
+  margin-top: 10px;
+}
+
+.entry-price ins.salePrice {
+    color: #a00;
+}
+.entry-price del.salePrice {
+    position: relative;
+}
+.entry-price del.salePrice::after {
+    content: '';
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background: #a00;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.flashs.style-02 > span.onsale {
+    background: #a00;
+}
