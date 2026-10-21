@@ -25,16 +25,16 @@
       <li class="products-view p-0i">
         <ul class="m-0 p-0">
           <li class="">
-            <a href="javascript:void(0)"{%unless limit == 16%} data-ktpjax{% endunless %} class="show-pds{%if limit == 16%} active{% endif %}" data-pds="_16pds" data-href="{{layout_gl}}_16pds">{{'sections.products_section.products_count'| t , count: 16}}</a>
+            <a href="javascript:void(0)"{%unless limit == 16%} data-ktpjax{% endunless %} class="show-pds{%if limit == 16%} active{% endif %}" data-pds="_16pds" data-href="{{layout_gl}}_16pds">{{ 'sections.products_section.products_count' | t: count: 16 }}</a>
           </li>
           <li class="">
-            <a href="javascript:void(0)"{%unless limit == 20%} data-ktpjax{% endunless %} class="show-pds{%if limit == 20%} active{% endif %}" data-pds="_20pds" data-href="{{layout_gl}}_20pds">{{'sections.products_section.products_count'| t , count: 20}}</a>
+            <a href="javascript:void(0)"{%unless limit == 20%} data-ktpjax{% endunless %} class="show-pds{%if limit == 20%} active{% endif %}" data-pds="_20pds" data-href="{{layout_gl}}_20pds">{{ 'sections.products_section.products_count' | t: count: 20 }}</a>
           </li>
           <li class="">
-            <a href="javascript:void(0)"{%unless limit == 30%} data-ktpjax{% endunless %} class="show-pds{%if limit == 30%} active{% endif %}" data-pds="_30pds" data-href="{{layout_gl}}_30pds">{{'sections.products_section.products_count'| t , count: 30}}</a>
+            <a href="javascript:void(0)"{%unless limit == 30%} data-ktpjax{% endunless %} class="show-pds{%if limit == 30%} active{% endif %}" data-pds="_30pds" data-href="{{layout_gl}}_30pds">{{ 'sections.products_section.products_count' | t: count: 30 }}</a>
           </li>
           <li class="">
-            <a href="javascript:void(0)"{%unless limit == 50%} data-ktpjax{% endunless %} class="show-pds{%if limit == 50%} active{% endif %}" data-pds="_50pds" data-href="{{layout_gl}}_50pds">{{'sections.products_section.products_count'| t , count: 50}}</a>
+            <a href="javascript:void(0)"{%unless limit == 50%} data-ktpjax{% endunless %} class="show-pds{%if limit == 50%} active{% endif %}" data-pds="_50pds" data-href="{{layout_gl}}_50pds">{{ 'sections.products_section.products_count' | t: count: 50 }}</a>
           </li>
         </ul>
       </li>
@@ -52,16 +52,16 @@
       <li class="products-view p-0i">
         <ul class="m-0 p-0">
           <li class="">
-            <a href="javascript:void(0)"{%unless limit == 16%} data-ktpjax{% endunless %} class="show-pds{%if limit == 16%} active{% endif %}" data-pds="_16pds" data-href="{{layout_gl}}_16pds">{{'sections.products_section.products_count'| t , count: 16}}</a>
+            <a href="javascript:void(0)"{%unless limit == 16%} data-ktpjax{% endunless %} class="show-pds{%if limit == 16%} active{% endif %}" data-pds="_16pds" data-href="{{layout_gl}}_16pds">{{ 'sections.products_section.products_count' | t: count: 16 }}</a>
           </li>
           <li class="">
-            <a href="javascript:void(0)"{%unless limit == 20%} data-ktpjax{% endunless %} class="show-pds{%if limit == 20%} active{% endif %}" data-pds="_20pds" data-href="{{layout_gl}}_20pds">{{'sections.products_section.products_count'| t , count: 20}}</a>
+            <a href="javascript:void(0)"{%unless limit == 20%} data-ktpjax{% endunless %} class="show-pds{%if limit == 20%} active{% endif %}" data-pds="_20pds" data-href="{{layout_gl}}_20pds">{{ 'sections.products_section.products_count' | t: count: 20 }}</a>
           </li>
           <li class="">
-            <a href="javascript:void(0)"{%unless limit == 30%} data-ktpjax{% endunless %} class="show-pds{%if limit == 30%} active{% endif %}" data-pds="_30pds" data-href="{{layout_gl}}_30pds">{{'sections.products_section.products_count'| t , count: 30}}</a>
+            <a href="javascript:void(0)"{%unless limit == 30%} data-ktpjax{% endunless %} class="show-pds{%if limit == 30%} active{% endif %}" data-pds="_30pds" data-href="{{layout_gl}}_30pds">{{ 'sections.products_section.products_count' | t: count: 30 }}</a>
           </li>
           <li class="">
-            <a href="javascript:void(0)"{%unless limit == 50%} data-ktpjax{% endunless %} class="show-pds{%if limit == 50%} active{% endif %}" data-pds="_50pds" data-href="{{layout_gl}}_50pds">{{'sections.products_section.products_count'| t , count: 50}}</a>
+            <a href="javascript:void(0)"{%unless limit == 50%} data-ktpjax{% endunless %} class="show-pds{%if limit == 50%} active{% endif %}" data-pds="_50pds" data-href="{{layout_gl}}_50pds">{{ 'sections.products_section.products_count' | t: count: 50 }}</a>
           </li>
         </ul>
       </li>
@@ -80,4 +80,34 @@
     <a href="javascript:void(0)"{%unless gl == '6'%} data-ktpjax{% endunless %} class="show-grid{%if gl == '6'%} active{% endif %}" data-href="6grid{{limit_pds}}"{%unless ly contains 'lis'%} data-col=" col-xs-6 col-sm-4 col-md-2-10 col-xl-2" data-fix-col=" row flex-flow"{%endunless%}>{% render 'icon-ly', col: '6' %}</a>
   </li>
 </ul>
-{%- endif -%}
+{%- endif -%}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{{'sections.products_section.products_count'| t , count: 16}}"
+  to: "{{ 'sections.products_section.products_count' | t: count: 16 }}"
+  position: 2761..2824
+- from: "{{'sections.products_section.products_count'| t , count: 20}}"
+  to: "{{ 'sections.products_section.products_count' | t: count: 20 }}"
+  position: 3062..3125
+- from: "{{'sections.products_section.products_count'| t , count: 30}}"
+  to: "{{ 'sections.products_section.products_count' | t: count: 30 }}"
+  position: 3363..3426
+- from: "{{'sections.products_section.products_count'| t , count: 50}}"
+  to: "{{ 'sections.products_section.products_count' | t: count: 50 }}"
+  position: 3664..3727
+- from: "{{'sections.products_section.products_count'| t , count: 16}}"
+  to: "{{ 'sections.products_section.products_count' | t: count: 16 }}"
+  position: 4765..4828
+- from: "{{'sections.products_section.products_count'| t , count: 20}}"
+  to: "{{ 'sections.products_section.products_count' | t: count: 20 }}"
+  position: 5066..5129
+- from: "{{'sections.products_section.products_count'| t , count: 30}}"
+  to: "{{ 'sections.products_section.products_count' | t: count: 30 }}"
+  position: 5367..5430
+- from: "{{'sections.products_section.products_count'| t , count: 50}}"
+  to: "{{ 'sections.products_section.products_count' | t: count: 50 }}"
+  position: 5668..5731
+{%- endcomment -%}

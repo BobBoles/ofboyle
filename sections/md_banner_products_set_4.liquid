@@ -107,7 +107,7 @@
                       {%- if block.settings[product_] != blank -%}
                       <div class="col-12 col-xs-6 col-sm-4">
                         <div class="grid-item p-style-{{grid_ly}}">
-                          {%- render "product-grid-item", product: all_products[block.settings[product_], grid_layout: grid_ly, wishlist: wishlist, st_card: st_card -%}
+                          {%- render "product-grid-item", product: all_products.block.settings[product_], grid_layout: grid_ly, wishlist: wishlist, st_card: st_card -%}
                         </div>
                       </div>
                       {%- endif -%}
@@ -558,4 +558,15 @@
       }
     ]
   }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{%- render "product-grid-item", product: all_products[block.settings[product_],
+    grid_layout: grid_ly, wishlist: wishlist, st_card: st_card -%}'
+  to: '{%- render "product-grid-item", product: all_products.block.settings[product_],
+    grid_layout: grid_ly, wishlist: wishlist, st_card: st_card -%}'
+  position: 4835..4977
+{%- endcomment -%}

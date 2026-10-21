@@ -1,7 +1,7 @@
 {%- layout none -%}
 {%- capture canonical_url -%}{% render 'kt_url_full' %}{%- endcapture -%}
 {%- assign area_width = canonical_url | split: 'width=' | last | split: '&' | first | plus: 0 -%}
-{%- paginate search.results -%}
+{%- paginate search.results by nil -%}
 {%- assign productObj = 0 -%}
 {%- assign productObj_ = '' -%}
 {%- assign articleObj = 0 -%}
@@ -150,3 +150,13 @@
   <li class="item-search margin-0"><h6 class="margin-0">{{'general.search.no_results_html'|t : terms: searchTerms}}</h6></li>
 {%- endif -%}
 {%- endpaginate -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- paginate search.results -%}"
+  to: "{%- paginate search.results by nil -%}"
+  position: 192..230
+{% endcomment %}
